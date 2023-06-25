@@ -1,0 +1,41 @@
+body {
+    background-color: #CCC;
+}
+
+.flashes {
+    list-style-type: none;
+    padding: auto;
+}
+
+.flashes li {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 50%;
+    margin-inline: auto;
+    border-radius: 10px;
+}
+
+.info {
+    background-color: #ba55d3;
+}
+
+.success {
+    background-color: #00ff00;
+}
+
+.warning {
+    background-color: #ffff00;
+}
+
+.error {
+    background-color: #fa8072;
+}
+
+/*menu index*/
+#menu-index {
+    list-style-type: none;
+    padding: auto;
+    border: 2px solid black;
+    display: inline-block;
+}
