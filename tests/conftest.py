@@ -8,7 +8,7 @@ from project.models import User, db
 
 @pytest.fixture(scope='session')
 def app():
-    app = create_app('testing')
+    app = create_app()
     app_context = app.app_context()
     app_context.push()
 
@@ -21,6 +21,16 @@ def app():
 def client(app):
     return app.test_client()
 
+
+@pytest.fixture(scope='class')
+def user():
+    user = User()
+    user.first_name = 'peter'
+    user.last_name = 'parker'
+    user.email = 'spider@icloud.com'
+    user.created_at = datetime.now()
+    yield user
+    del user
 
 @pytest.fixture(scope='session')
 def database(app):

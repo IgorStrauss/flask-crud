@@ -24,8 +24,8 @@ def test_update_user_view(database):
         response = test_client.post('/atualizar/1/', data={
             'first_name': 'nick',
             'last_name': 'fury',
-            'username': 'nickfury-update',
-            'email': 'nick@email.com',
+            'username': 'nickfury-update1',
+            'email': 'nick1@email.com',
             'created_at': datetime.now()
         })
         assert response.status_code == 302
