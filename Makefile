@@ -1,8 +1,12 @@
 # bin/sh
 
-exp:
+exp-d:
 	export FLASK_APP=project
 	export FLASK_ENV=development
+
+exp-t:
+	export FLASK_APP=project
+	export FLASK_ENV=testing
 
 run:
 	export FLASK_APP=project

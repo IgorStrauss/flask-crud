@@ -1,7 +1,10 @@
 from flask import Flask
 from flask_migrate import Migrate
+
 from project.models import db
+
 Migrate()
+
 
 def create_app():
 
@@ -15,7 +18,6 @@ def create_app():
     Migrate(app, db)
 
     from project import urls
-    urls.init_app(app)    
-
+    urls.init_app(app)
 
     return app

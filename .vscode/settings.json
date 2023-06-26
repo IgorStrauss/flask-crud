@@ -39,11 +39,11 @@
         // "--ignore=E111",
     ],
     "python.linting.flake8Enabled": true,
-    "python.linting.mypyEnabled": true,
+    "python.linting.mypyEnabled": false,
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
     "python.testing.pytestArgs": [
-        "project"
+        "tests"
     ],
     "python.analysis.diagnosticSeverityOverrides": {
         "reportUnknownMemberType": "none",
@@ -52,9 +52,16 @@
         "reportUnknownLambdaType": "none",
         "reportUnknownParameterType": "none"
     },
-    "python.defaultInterpreterPath": "./venv-erp-marquesigor/bin/python",
+    "python.defaultInterpreterPath": "./flask-crud-local-lsdApfHo-py3.8/bin/python",
     "python.analysis.typeCheckingMode": "basic",
     "cSpell.enabled": true,
     "python.formatting.provider": "none",
-    "cSpell.words": []
+    "cSpell.words": [],
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./tests",
+        "-p",
+        "*test*.py"
+    ]
 }

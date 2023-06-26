@@ -1,5 +1,3 @@
-from http import HTTPStatus
-
 from flask import abort, flash, redirect, render_template, request, url_for
 from sqlalchemy import text
 
