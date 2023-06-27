@@ -1,1 +1,6 @@
 https://celke.com.br/artigo/tabela-de-cores-html-nome-hexadecimal-rgb
+
+
+    # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
+    # app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
+    # app.config['SECRET_KEY'] = 'asdklj23476hkjda'

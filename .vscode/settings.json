@@ -38,6 +38,8 @@
     "python.linting.flake8Args": [
         // "--ignore=E111",
     ],
+    "python.envFile": "${workspaceFolder}/.env",
+    "python.testing.envFile": "${workspaceFolder}/.env",
     "python.linting.flake8Enabled": true,
     "python.linting.mypyEnabled": false,
     "python.testing.unittestEnabled": false,

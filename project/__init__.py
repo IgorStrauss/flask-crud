@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask
 from flask_migrate import Migrate
 
@@ -10,9 +12,12 @@ def create_app():
 
     app = Flask(__name__)
 
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
-    app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
-    app.config['SECRET_KEY'] = 'asdklj23476hkjda'
+    if os.environ.get('FLASK_ENV') == 'testing':
+        app.config.from_object('test_config.TestConfigurations')
+    elif os .environ.get('FLASK_ENV') == 'development':
+        app.config.from_object('development_config.DevelopmentConfig')
+    else:
+        raise ValueError('FLASK_ENV inválido')
 
     db.init_app(app)
     Migrate(app, db)
