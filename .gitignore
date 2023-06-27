@@ -89,6 +89,7 @@ flask-crud-local-lsdApfHo-py3.8
 # mkdocs documentation
 /site
 apoio.txt
+zgteam.py
 # mypy
 .mypy_cache/
 
