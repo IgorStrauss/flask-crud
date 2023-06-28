@@ -22,7 +22,8 @@ def create_app():
     db.init_app(app)
     Migrate(app, db)
 
-    from project import urls
+    from project import documentation_urls, urls
     urls.init_app(app)
+    documentation_urls.init_app(app)
 
     return app

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+    <title>Endpoints</title>
+</head>
+
+<body>
+    <div class="container-sm mt-3">
+        <div class="row sm text-sm-center">
+            <h1>Documentação de Endpoints</h1>
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">URL</th>
+                        <th scope="col">Métodos</th>
+                        <th scope="col">Descrição</th>
+                    </tr>
+                </thead>
+                {% for endpoint in endpoints %}
+                <tr>
+                    <td>{{ endpoint.url }}</td>
+                    <td>{{ endpoint.methods }}</td>
+                    <td>{{ endpoint.docstring }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
